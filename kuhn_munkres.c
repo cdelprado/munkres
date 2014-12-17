@@ -119,7 +119,7 @@ Munkres step3(Munkres M, int done){
 Munkres step5(Munkres M){
 //aqui esta el error
 	int mat[(NP*2)][(NP*2)];
-	memcpy(mat, M.marked, sizeof(mat));
+	memcpy(mat, M.marked, sizeof(mat));//copiar matriz a una local porque se perdia la memoria al hacer comparaciones
 
 	int path[(NP*2)][2];
 	int count = 0;
